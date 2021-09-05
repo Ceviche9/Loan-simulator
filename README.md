@@ -20,7 +20,7 @@ This project was developed using the following technologies:
 - [PostgreSQl](https://www.postgresql.org/)
 
 
-## ⚡️ INSTRUCTIONS
+## ⚡️ Instructions
 
 - [x] The maximum term for payment is 30 years.
 - [x] The minimum loan amount is R$50,000.00.
