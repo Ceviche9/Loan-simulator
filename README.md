@@ -17,7 +17,7 @@ This project was developed using the following technologies:
 - [React](https://pt-br.reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Node](https://nodejs.org/en/)
-- [PostgresQl](https://www.postgresql.org/)
+- [PostgreSQl](https://www.postgresql.org/)
 
 
 ## ⚡️ INSTRUCTIONS
