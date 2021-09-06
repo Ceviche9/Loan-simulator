@@ -9,6 +9,7 @@ import { interestCalculator } from '../../utils/interest';
 class LoanController {
   async index(req, res) {
     try {
+      // Para pegar todos os emprestimos que estão armazenados no banco.
       const loans = await Loan.findAll();
 
       return res.status(400).json({ loans });
@@ -28,6 +29,7 @@ class LoanController {
       // Verificando se o CPF é válido.
       const isValid = ValidaCpf(cpf);
 
+      // Caso o cpf não seja válido, é retornado um erro.
       if (!isValid) {
         return res.status(401).json({ message: "invalid CPF" });
       }
@@ -51,6 +53,7 @@ class LoanController {
       const amount = value / months;
       const amountCal = interestCalculator(amount, uf).toFixed(2);
 
+      // Armazenando os dados no banco.
       const createLoan = await Loan.create({ cpf, uf, birth_date: parsedDate, value, months, installment_amount: amountCal });
 
       return res.json({ createLoan });

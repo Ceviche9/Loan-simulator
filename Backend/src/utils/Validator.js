@@ -3,11 +3,11 @@
 // Funções responsáveis para fazer a validação do cpf
 
 export const ValidaCpf = (cpf) => {
+  // Para substituir os simbolos por espaços vazios.
   const noSpaceCpf = cpf.replace(/\D+/g, '');
   const cpfValidator = CpfCheck(noSpaceCpf);
 
   if (!cpfValidator) {
-    console.log(cpfValidator);
     return false;
   }
 
