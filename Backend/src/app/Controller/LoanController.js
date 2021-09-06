@@ -62,12 +62,3 @@ class LoanController {
 }
 
 export { LoanController };
-
-/*
-There are two ways this can be handled:
-
-Temporary Front-End solution so you can test if your API integration is working:
-Click on window -> type run and hit enter -> in the command window copy:
-
-chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security
-*/
