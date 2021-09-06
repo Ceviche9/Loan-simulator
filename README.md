@@ -14,9 +14,9 @@
 
 This project was developed using the following technologies:
  
-- [React](https://pt-br.reactjs.org/)
+- [Reactjs](https://pt-br.reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
-- [Node](https://nodejs.org/en/)
+- [Nodejs](https://nodejs.org/en/)
 - [PostgreSQl](https://www.postgresql.org/)
 
 
