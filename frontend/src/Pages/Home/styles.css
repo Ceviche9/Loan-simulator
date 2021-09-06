@@ -97,4 +97,9 @@
   color: white;
   border: 0;
   border-radius: 2%;
+
+}
+
+#btn-save:hover {
+  background-color: #df8e15;
 }
