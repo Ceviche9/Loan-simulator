@@ -1,3 +1,5 @@
+/* eslint-disable lines-around-directive */
+/* eslint-disable eol-last */
 "use strict";
 
 module.exports = {
