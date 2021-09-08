@@ -56,19 +56,10 @@ const Home = () => {
     const [installments, fee] = interestCalculator(value, uf);
     const total = Number(installments) * Number(months);
     const userData = {cpf, uf, birthDate, value, months, installments, total, fee};
-    setContextState(userData);
-    history.push('/loan');
-  }
-
-  async function handleSearch() {
-    try{
-
-      const loans = await api.get("database").then(({data}) => data);
-      alert("Console carregado");
-      return console.log(loans);
-    } catch(e) {
-      return console.log("fail", e);
+    if(userData) {
+      setContextState(userData);
     }
+    history.push('/loan');
   }
 
   return (
@@ -81,7 +72,7 @@ const Home = () => {
           <div className="cpf-input-div" >
             <CpfCnpj
               value={cpf}
-              onChange={(e, type) => {setCpf(e.target.value); setMask(type === "CPF")}}
+              onChange={(e, type) => {setCpf(e.target.value); setMask("CPF")}}
               placeholder="CPF"
             />
           </div>

@@ -5,7 +5,12 @@ import { Loan } from '../Pages/Loan';
 
 const Data: Object = {}
 
-export const GlobalContext = createContext();
+interface CreateContextProps {
+  contextState?: Object | any;
+  setContextState?: Object | any;
+}
+
+export const GlobalContext = createContext<CreateContextProps>({});
 
 export const Routes = () => {
 

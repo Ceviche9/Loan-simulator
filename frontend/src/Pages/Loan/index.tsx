@@ -13,13 +13,14 @@ const Loan = () => {
 
   const TheContext = useContext(GlobalContext);
   const {contextState} = TheContext;
+  const ufUpper = contextState.uf.toUpperCase();
 
   const HandleData = async () =>  {
     try{
 
       const  loan = await api.post("loan", {
         cpf: contextState.cpf,
-        uf: contextState.uf,
+        uf: ufUpper,
         birth_date: contextState.birthDate,
         value: Number(contextState.value),
         months: Number(contextState.months),
