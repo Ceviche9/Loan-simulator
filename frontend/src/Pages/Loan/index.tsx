@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import api from '../../server';
 
 import {GlobalContext} from '../../Routes/routes';
@@ -13,7 +13,7 @@ const Loan = () => {
 
   const TheContext = useContext(GlobalContext);
   const {contextState} = TheContext;
-  const ufUpper = contextState.uf.toUpperCase();
+  const ufUpper = contextState?.uf?.toUpperCase();
 
   const HandleData = async () =>  {
     try{

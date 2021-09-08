@@ -29,20 +29,21 @@ const Home = () => {
   const interestCalculator = (value: string, uf: string): Array<String>  => {
 
     let installmentsValue = Number(value)/Number(months);
+    const ufUpper = uf.toUpperCase();
 
-    if (uf === "MG") {
+    if (ufUpper === "MG") {
       installmentsValue += installmentsValue * (1 / 100);
       const fee = "1.00";
       return [installmentsValue.toFixed(2), fee];
-    } if (uf === "SP") {
+    } if (ufUpper === "SP") {
       installmentsValue += installmentsValue * (0.8 / 100);
       const fee = "0.80";
       return [installmentsValue.toFixed(2), fee];
-    } if (uf === "RJ") {
+    } if (ufUpper === "RJ") {
       installmentsValue += installmentsValue * (0.119 / 100);
       const fee = "0.90";
       return [installmentsValue.toFixed(2), fee];
-    } if (uf === "ES") {
+    } if (ufUpper === "ES") {
       installmentsValue += installmentsValue * (1.11 / 100);
       const fee = "1.11";
       return [installmentsValue.toFixed(2), fee];
@@ -78,6 +79,7 @@ const Home = () => {
           </div>
           <div className="input-div" >
             <InputText
+              className="input-div-uf"
               onChange={(e) => setUF(e.target.value)}
               value={uf}
               placeholder="UF"

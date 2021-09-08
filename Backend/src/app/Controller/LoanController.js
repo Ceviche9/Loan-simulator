@@ -12,10 +12,6 @@ class LoanController {
       // Para pegar todos os emprestimos que estão armazenados no banco.
       const loans = await Loan.findAll();
 
-      if (!loans) {
-        return res.status(400).json({});
-      }
-
       return res.status(400).json({ loans });
     } catch (e) {
       console.log(e);

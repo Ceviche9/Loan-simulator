@@ -73,6 +73,16 @@
   margin-bottom: 10px;
 }
 
+.input-div-uf input{
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  padding-left: 5px;
+  padding-right: 25px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 
 .form-input-form{
   width: 95%;

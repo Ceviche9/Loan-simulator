@@ -1,16 +1,16 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.ValidaCpf = void 0;
+
 /* eslint-disable no-param-reassign */
-
 // Funções responsáveis para fazer a validação do cpf
-
-var ValidaCpf = exports.ValidaCpf = function ValidaCpf(cpf) {
+const ValidaCpf = cpf => {
   // Para substituir os simbolos por espaços vazios.
-  var noSpaceCpf = cpf.replace(/\D+/g, '');
-  var cpfValidator = CpfCheck(noSpaceCpf);
+  const noSpaceCpf = cpf.replace(/\D+/g, '');
+  const cpfValidator = CpfCheck(noSpaceCpf);
 
   if (!cpfValidator) {
     return false;
@@ -19,36 +19,33 @@ var ValidaCpf = exports.ValidaCpf = function ValidaCpf(cpf) {
   return true;
 };
 
-var CpfCheck = function CpfCheck(noSpaceCpf) {
+exports.ValidaCpf = ValidaCpf;
+
+const CpfCheck = noSpaceCpf => {
   if (typeof noSpaceCpf === 'undefined') return false;
   if (noSpaceCpf.length !== 11) return false;
-  if (noSpaceCpf[0].repeat(noSpaceCpf.length) === noSpaceCpf) return false;
+  if (noSpaceCpf[0].repeat(noSpaceCpf.length) === noSpaceCpf) return false; // Para pegar os 9 primeiros dígitos do cpf
 
-  // Para pegar os 9 primeiros dígitos do cpf
-  var cpfParcial = noSpaceCpf.slice(0, -2);
-  var FirstDigit = criaDigito(cpfParcial);
-  var SecondDigit = criaDigito(cpfParcial + FirstDigit);
-
-  var newCpf = cpfParcial + FirstDigit + SecondDigit;
+  const cpfParcial = noSpaceCpf.slice(0, -2);
+  const FirstDigit = criaDigito(cpfParcial);
+  const SecondDigit = criaDigito(cpfParcial + FirstDigit);
+  const newCpf = cpfParcial + FirstDigit + SecondDigit;
   return newCpf === noSpaceCpf;
 };
 
-var criaDigito = function criaDigito(ParcialCPF) {
+const criaDigito = ParcialCPF => {
   // criando um array com os 9 dígitos->
-  var cpfArray = Array.from(ParcialCPF);
-  // criando o contador para usar no reduce()
-  var counter = cpfArray.length + 1;
+  const cpfArray = Array.from(ParcialCPF); // criando o contador para usar no reduce()
 
-  // Fazendo a soma ->
-  var total = cpfArray.reduce(function (ac, value) {
+  let counter = cpfArray.length + 1; // Fazendo a soma ->
+
+  const total = cpfArray.reduce((ac, value) => {
     ac += counter * Number(value);
     counter--;
     return ac;
-  }, 0);
+  }, 0); // Para encontrar o dígito->
 
-  // Para encontrar o dígito->
-  var digit = 11 - total % 11;
+  const digit = 11 - total % 11; // "Se o dígito for maior que 9 retorna 0, se não retorna o dígito"
 
-  // "Se o dígito for maior que 9 retorna 0, se não retorna o dígito"
   return digit > 9 ? '0' : String(digit);
 };
