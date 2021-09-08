@@ -8,7 +8,6 @@ import {InputText} from '../../Components/Input';
 
 import {GlobalContext} from '../../Routes/routes';
 
-import api from '../../server';
 
 import './styles.css';
 
@@ -47,20 +46,32 @@ const Home = () => {
       installmentsValue += installmentsValue * (1.11 / 100);
       const fee = "1.11";
       return [installmentsValue.toFixed(2), fee];
-    }
-  
-    return [];
+    } else{
+      const installmentsValue = "Nan"
+      const fee = "Nan"
+      return [installmentsValue, fee];
+
+    };
   }; 
+
+
+  function handleContextData(data: Object) {
+    if(data) {
+      setContextState(data);
+    }
+    return history.push('/loan');
+  }
 
 
   function handleSave() {
     const [installments, fee] = interestCalculator(value, uf);
     const total = Number(installments) * Number(months);
-    const userData = {cpf, uf, birthDate, value, months, installments, total, fee};
-    if(userData) {
-      setContextState(userData);
+    if(installments === "Nan" && fee === "Nan") {
+      return alert("Uf Inválido");
     }
-    history.push('/loan');
+    const userData = {cpf, uf, birthDate, value, months, installments, total, fee};
+    return handleContextData(userData);
+    
   }
 
   return (
