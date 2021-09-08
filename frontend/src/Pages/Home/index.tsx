@@ -8,6 +8,8 @@ import {InputText} from '../../Components/Input';
 
 import {GlobalContext} from '../../Routes/routes';
 
+import {ValidaCpf} from '../../utils/CPF';
+
 
 import './styles.css';
 
@@ -64,6 +66,9 @@ const Home = () => {
 
 
   function handleSave() {
+    if(!ValidaCpf(cpf)) {
+      return alert("CPF Inválido");
+    }
     const [installments, fee] = interestCalculator(value, uf);
     const total = Number(installments) * Number(months);
     if(installments === "Nan" && fee === "Nan") {
