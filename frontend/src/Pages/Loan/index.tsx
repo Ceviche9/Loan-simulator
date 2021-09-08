@@ -1,11 +1,10 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import api from '../../server';
 
 import {GlobalContext} from '../../Routes/routes';
 import { useHistory } from 'react-router-dom';
 
 import './styles.css';
-
 
 const Loan = () => {
   
@@ -32,6 +31,7 @@ const Loan = () => {
   
       return console.log("OK", loan);
     } catch(e) {
+      alert("Erro ao solicitar o empréstimo")
       return console.log("Fail");
     }
   }
