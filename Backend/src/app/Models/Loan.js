@@ -11,11 +11,12 @@ class Loan extends Model {
         birth_date: Sequelize.DATE,
         value: Sequelize.STRING,
         months: Sequelize.INTEGER,
-        installment_amount: Sequelize.FLOAT
+        installment_amount: Sequelize.FLOAT,
 
       },
       {
         sequelize,
+        modelName: "loans"
       }
     );
 

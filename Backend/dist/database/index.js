@@ -10,10 +10,6 @@ var _sequelize = require("sequelize");
 
 var _sequelize2 = _interopRequireDefault(_sequelize);
 
-var _database = require("../config/database");
-
-var _database2 = _interopRequireDefault(_database);
-
 var _Loan = require("../app/Models/Loan");
 
 var _Loan2 = _interopRequireDefault(_Loan);
@@ -36,7 +32,22 @@ var Database = function () {
     value: function init() {
       var _this = this;
 
-      this.connection = new _sequelize2.default(_database2.default);
+      this.database = process.env.DATABASE_URL || 'postgres://ghzxinjzpphaui:218b80d1047e3827eed995aefeb5e09e31baf8c220b28313f1ae5de18b75bd6c@ec2-107-20-24-247.compute-1.amazonaws.com:5432/db1dicruq3hqqe';
+      this.connection = new _sequelize2.default(this.database, {
+        dialect: 'postgres',
+        ssl: true,
+        dialectOptions: {
+          ssl: {
+            require: true,
+            rejectUnauthorized: false
+          }
+        },
+        define: {
+          timestamps: true,
+          underscored: true,
+          underscoredAll: true
+        }
+      });
 
       models.map(function (model) {
         return model.init(_this.connection);

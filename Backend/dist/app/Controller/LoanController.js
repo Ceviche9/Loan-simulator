@@ -35,6 +35,10 @@ var LoanController = function () {
         // Para pegar todos os emprestimos que estão armazenados no banco.
         var loans = await _Loan2.default.findAll();
 
+        if (!loans) {
+          return res.status(400).json({});
+        }
+
         return res.status(400).json({ loans: loans });
       } catch (e) {
         console.log(e);

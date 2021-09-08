@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -8,7 +8,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-var _sequelize = require('sequelize');
+var _sequelize = require("sequelize");
 
 var _sequelize2 = _interopRequireDefault(_sequelize);
 
@@ -33,9 +33,9 @@ var Loan = function (_Model) {
   }
 
   _createClass(Loan, null, [{
-    key: 'init',
+    key: "init",
     value: function init(sequelize) {
-      _get(Loan.__proto__ || Object.getPrototypeOf(Loan), 'init', this).call(this, {
+      _get(Loan.__proto__ || Object.getPrototypeOf(Loan), "init", this).call(this, {
         cpf: Sequelize.STRING,
         uf: Sequelize.STRING,
         birth_date: Sequelize.DATE,
@@ -44,7 +44,8 @@ var Loan = function (_Model) {
         installment_amount: Sequelize.FLOAT
 
       }, {
-        sequelize: sequelize
+        sequelize: sequelize,
+        modelName: "loans"
       });
 
       return this;
