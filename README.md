@@ -1,9 +1,7 @@
-<h3 align="center">
-  Letalk-challenge
-</h3>
 
-<p align="center">This is a fullstack aplication that simulates a bank loan and stores it in a database </p>
+# Letalk-challenge
 
+This is a fullstack aplication that simulates a bank loan and stores it in a database.
 
 ## 💻 Introduction
 
@@ -31,3 +29,16 @@ This project was developed using the following technologies:
 - [x] The business rule must be all in the backend of the application, the frontend will be only to display the information.
 - [x] The application should be developed preferably in Node.js and React.
 
+## 📋 How it works
+> The validations for this application are in the backend, so if the user does not follow the instructions below, the data will not be stored.
+
+- Only valid cpf will be accepted.
+- The user will have to send a valid "uf", the options are: MG, RJ, SP and ES.
+- The minimum amount that can be sent to request a loan has to be 60,000 reais.
+- In the last field the value cannot be greater than 360 months.
+
+
+## 📚 Database
+
+To see all the data stored inside the database just follow this link: 
+https://letalk-backend.herokuapp.com/database
