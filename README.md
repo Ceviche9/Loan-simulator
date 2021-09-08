@@ -1,7 +1,11 @@
 
-# Letalk-challenge
+<h1 align="center">
+  Letalk Challenge
+</h1>
 
-This is a fullstack aplication that simulates a bank loan and stores it in a database.
+<h3 align="center">
+  This is a fullstack aplication that simulates a bank loan and stores it in a database.
+</h3>
 
 ## 💻 Introduction
 
