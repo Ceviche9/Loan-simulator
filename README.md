@@ -32,7 +32,7 @@ This project was developed using the following technologies:
 ## 📋 How it works
 > The validations for this application are in the backend, so if the user does not follow the instructions below, the data will not be stored.
 
-- Only valid cpf will be accepted.
+- Only valid CPF will be accepted.
 - The user will have to send a valid "uf", the options are: MG, RJ, SP and ES.
 - The minimum amount that can be sent to request a loan has to be 60,000 reais.
 - In the last field the value cannot be greater than 360 months.
