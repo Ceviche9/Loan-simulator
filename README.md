@@ -12,6 +12,11 @@
 
 ![View](https://user-images.githubusercontent.com/83431609/132618122-f43de69b-ae81-4bed-bf54-f3c601ae8464.gif)
 
+## 📚 Database
+
+Route to access the database: 
+https://letalk-backend.herokuapp.com/database
+
 ## 🧪 Technologies
 
 This project was developed using the following technologies:
@@ -41,8 +46,3 @@ This project was developed using the following technologies:
 - The minimum amount that can be sent to request a loan has to be 50,000.
 - In the last field the value cannot be greater than 360 months.
 
-
-## 📚 Database
-
-To see all the data stored inside the database just follow this link: 
-https://letalk-backend.herokuapp.com/database
