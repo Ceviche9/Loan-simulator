@@ -10,7 +10,7 @@
 ## 💻 Introduction
 
 
-![bookfinder](https://user-images.githubusercontent.com/83431609/132115717-a970888e-03fe-46ee-ae12-17a4803e7e67.gif)
+![View](https://user-images.githubusercontent.com/83431609/132603190-31167863-bd50-4297-b79a-c9724eec56a3.gif)
 
 ## 🧪 Technologies
 
@@ -38,7 +38,7 @@ This project was developed using the following technologies:
 
 - Only valid CPF will be accepted.
 - The user will have to send a valid "uf", the options are: MG, RJ, SP and ES.
-- The minimum amount that can be sent to request a loan has to be 60,000 reais.
+- The minimum amount that can be sent to request a loan has to be 50,000.
 - In the last field the value cannot be greater than 360 months.
 
 
