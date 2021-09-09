@@ -1,10 +1,11 @@
-import React, {useContext, createContext, useState} from 'react';
+import React, {createContext, useState} from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { Home } from '../Pages/Home';
 import { Loan } from '../Pages/Loan';
 
 const Data: Object = {}
 
+// Criando a props do contexto.
 interface CreateContextProps {
   contextState?: Object | any;
   setContextState?: Object | any;

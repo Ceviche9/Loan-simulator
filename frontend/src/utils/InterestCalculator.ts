@@ -1,3 +1,4 @@
+// Para calcular o juros de acordo com o Estado.
 const interestCalculator = (value: String, uf: String, months: String): Array<String>  => {
 
   let installmentsValue = Number(value)/Number(months);

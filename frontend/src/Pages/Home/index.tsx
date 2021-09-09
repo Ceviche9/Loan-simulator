@@ -46,6 +46,7 @@ const Home = () => {
     if(installments === "Nan" && fee === "Nan") {
       return alert("Uf Inválido");
     }
+    total.toFixed(2);
     const userData = {cpf, uf, birthDate, value, months, installments, total, fee};
     return handleContextData(userData);
     
