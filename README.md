@@ -46,3 +46,9 @@ This project was developed using the following technologies:
 - The minimum amount that can be sent to request a loan has to be 50,000.
 - In the last field the value cannot be greater than 360 months.
 
+## 📝 License
+
+This project is under the MIT license. See the file [LICENSE](LICENSE.md) for more details.
+
+---
+
