@@ -1,20 +1,30 @@
 import React, { useState, useContext} from 'react';
+import { toast } from 'react-toastify';
 
 import CpfCnpj from "@react-br-forms/cpf-cnpj-mask";
 
 import { useHistory } from 'react-router-dom';
 
 import {InputText} from '../../Components/Input';
+import {Toast} from '../../Components/Toast';
 
 import {GlobalContext} from '../../Routes/routes';
 
 import {ValidaCpf} from '../../utils/CPF';
 import {interestCalculator} from '../../utils/InterestCalculator';
 
-
-
 import './styles.css';
 
+interface HandleDataProps {
+  cpf: String,
+  uf: String,
+  birthDate: String,
+  value: String,
+  months: String,
+  installments: String,
+  total: Number,
+  fee: String
+}
 
 const Home = () => {
   const TheContext = useContext(GlobalContext);
@@ -29,22 +39,33 @@ const Home = () => {
   const [value, setValue] = useState("");
   const [months, setMonths] = useState("");
 
+  
+  const notifyError = (err) => toast.error(err, {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });;
 
-  function handleContextData(data: Object) {
-    if(data) {
-      setContextState(data);
+  function handleContextData(data: HandleDataProps) {
+    if(data.birthDate === "" || data.months === "" || data.value === "") {
+      return notifyError("Todos os campos são obrigatórios");
     }
+    setContextState(data);
     return history.push('/loan');
   }
-  
+
   function handleSave() {
     if(!ValidaCpf(cpf)) {
-      return alert("CPF Inválido");
+      return notifyError("CPF inválido");
     }
     const [installments, fee] = interestCalculator(value, uf, months);
     const total = Number(installments) * Number(months);
     if(installments === "Nan" && fee === "Nan") {
-      return alert("Uf Inválido");
+      return notifyError("UF Inválido");
     }
     total.toFixed(2);
     const userData = {cpf, uf, birthDate, value, months, installments, total, fee};
@@ -98,6 +119,7 @@ const Home = () => {
             />
           </div>
             <button type="button" id="btn-save" onClick={handleSave} >SIMULAR</button>
+            <Toast />
         </div>
         </div>
       </div>

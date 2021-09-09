@@ -29,7 +29,7 @@ const Loan = () => {
 
       history.push('/');
   
-      return console.log("OK", loan);
+      return console.log("OK");
     } catch(e) {
       alert("Erro ao solicitar o empréstimo")
       return console.log("Fail");
