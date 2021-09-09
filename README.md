@@ -38,7 +38,7 @@ This project was developed using the following technologies:
 - [x] The business rule must be all in the backend of the application, the frontend will be only to display the information.
 - [x] The application should be developed preferably in Node.js and React.
 
-## 📋 How it works
+## 🛠 How it works
 > The validations for this application are in the backend, so if the user does not follow the instructions below, the data will not be stored.
 
 - Only valid CPF will be accepted.
