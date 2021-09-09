@@ -10,7 +10,7 @@
 ## 💻 Introduction
 
 
-![View](https://user-images.githubusercontent.com/83431609/132603190-31167863-bd50-4297-b79a-c9724eec56a3.gif)
+![View](https://user-images.githubusercontent.com/83431609/132618122-f43de69b-ae81-4bed-bf54-f3c601ae8464.gif)
 
 ## 🧪 Technologies
 
