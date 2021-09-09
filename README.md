@@ -38,7 +38,7 @@ This project was developed using the following technologies:
 
 - Only valid CPF will be accepted.
 - The user will have to send a valid "uf", the options are: MG, RJ, SP and ES.
-- The minimum amount that can be sent to request a loan has to be 60,000 reais.
+- The minimum amount that can be sent to request a loan has to be 60,000.
 - In the last field the value cannot be greater than 360 months.
 
 
