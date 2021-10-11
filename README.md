@@ -25,6 +25,7 @@ This project was developed using the following technologies:
 - [Typescript](https://www.typescriptlang.org/)
 - [Nodejs](https://nodejs.org/en/)
 - [PostgreSQl](https://www.postgresql.org/)
+- [Sequelize](https://sequelize.org/)
 
 
 ## ⚡️ Instructions
