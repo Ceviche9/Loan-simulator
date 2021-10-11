@@ -49,7 +49,7 @@ This project was developed using the following technologies:
 
 ## 📝 License
 
-This project is under the MIT license. See the file [LICENSE](LICENSE.md) for more details.
+this project was a challenge for a full stack developer position and is under the MIT license. See the file [LICENSE](LICENSE.md) for more details.
 
 ---
 
