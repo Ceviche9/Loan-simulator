@@ -1,6 +1,6 @@
 
 <h1 align="center">
-  Letalk Challenge
+  Loan Simulator
 </h1>
 
 <h3 align="center">
