@@ -22,6 +22,7 @@ https://letalk-backend.herokuapp.com/database
 This project was developed using the following technologies:
  
 - [Reactjs](https://pt-br.reactjs.org/)
+- [Material-ui](https://mui.com/pt/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Nodejs](https://nodejs.org/en/)
 - [PostgreSQl](https://www.postgresql.org/)
